@@ -1,0 +1,22 @@
+import javax.swing.*;  // JFrame, JPanel, JButton
+import java.awt.*;     // Color, Font, FlowLayout, GridLayout, BorderLayout
+
+public class MyJFrame extends JFrame{
+  public static int w = 250;
+  public static int h = 270;
+  public MyJPanel drawing;
+  
+  //constructor
+  public MyJFrame(Cell[][] grid){
+    this.drawing = new MyJPanel(grid);
+    this.add(drawing);
+    // configure frame parameters
+    this.setSize(w, h);
+    this.setResizable(false);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.setTitle("Game Of Life");
+    this.setLocationRelativeTo(null);
+    this.setVisible(true);
+  }
+    
+}
